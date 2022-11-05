@@ -12,7 +12,7 @@ const time = getFullDate.getHours();
 const minute = getFullDate.getMinutes();
 
 function App() {
-  const [city, setCity] = useState("Paris");
+  const [city, setCity] = useState("delhi");
   const [weather, setWeather] = useState(null);
   const [units, setUnits] = useState("metric");
   const [bg, setBg] = useState(sunset);
@@ -46,7 +46,7 @@ function App() {
     }else if(day===5){
       setWeekday("Friday");
     }else if(day===6){
-      setWeekday("Sturday");
+      setWeekday("Saturday");
     }
   },[]);
   const handleUnitsClick = (e) => {
@@ -98,7 +98,6 @@ function App() {
               </div>
             </div>
 
-            {/* bottom description */}
             <Descriptions weather={weather} units={units} />
           </div>
         )}
